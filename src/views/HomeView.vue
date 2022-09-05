@@ -1,18 +1,37 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <main>
+    <MainHeader />
+    <div class="greek-decoration">
+    </div>
+    <CarouselApp />
+    <div class="greek-decoration">
+    </div>
+    <MainFooter/>
+  </main>  
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import MainHeader from '@/components/MainHeader.vue';
+import MainFooter from '@/components/MainFooter.vue';
+import CarouselApp from '@/components/CarouselApp.vue';
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
-  }
-}
+    MainHeader,
+    CarouselApp,
+    MainFooter
+   
+}}
 </script>
+<style scoped lang="scss">
+   .greek-decoration {
+      background-image: url('../assets/photos/image-decoration.svg');
+      background-repeat: repeat-x;
+      background-position: 0 100%;
+      background-color: transparent;
+      height: 20px;
+      background-size: 150px 20px;
+      border-style:none;
+   }
+
+</style>
