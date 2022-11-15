@@ -1,80 +1,68 @@
 <template>
-    <main>
-        <section class="upper-footer">
-            
-            <div>
-                <img src="../assets/photos/tour-eiffel.png" alt="tour-eiffel">
-                <p>France Metropolitaine <br/>
-                Livraison gratuite a partir de 100E d'achat</p>
-            </div>
-            <div>
-                <img src="../assets/photos/euro.png" alt="euro">
-                <p>Europe <br/>
-                Free delievery over 150E</p>
-            </div>
-            <div>
-                <img src="../assets/photos/world.png" alt="world">
-                <p>Rest of the world <br/>
-                 Livraison gratuite a partir de 100E d'achat</p>
-            </div>
-            <div>
-                <img src="../assets/photos/logo2.png" alt="logo">
-                <p>Phaedon Paris <br/>
-                is 100% Made in France</p>
-            </div>
-            <div>
-                <img src="../assets/photos/image-store.png" alt="store">
-                <p>Retailers<br/>
-                Discover our retailers</p>
-            </div>
-        </section>
+<main>
+    <div class="greek-decoration">
+    </div>
+    <section class="upper-footer">
+        <div>
+            <p><span style="font-weight: bold; font-size:18px">In Romania</span><br/>
+            Free delievery over 100€</p>
+        </div>
+        <div>
+            <p><span style="font-weight: bold; font-size:18px">Europe</span><br/>
+                Free delievery over 150€</p>
+        </div>
+        <div>
+            <p><span style="font-weight: bold; font-size:18px">Rest of the world</span> <br/>
+                 Free deliveries on order over 300€</p>
+        </div>
+        <div>
+            <p><span style="font-weight: bold; font-size:18px">Lorga Bucharest</span><br/>
+                is 100% Made in Romania</p>
+        </div>
+    </section>
     <BottomFooter />
-
-    </main>
+</main>
 </template>
 
 <script>
-    import BottomFooter from './BottomFooter'
-    export default {
+import BottomFooter from './BottomFooter.vue'
+export default {
     name: "MainFooter",
-    components: { BottomFooter }
+    components: { 
+        BottomFooter }
 }
-    components : {
-        BottomFooter
-    }
 </script>
 
 <style scoped lang="scss">
-    .upper-footer {
+@import "../assets/colors/colors.scss";
+.upper-footer {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-bottom: 0;
+    background-color: $beige;
+    height: 100px;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    div {
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        box-sizing: border-box;
-        padding-bottom: 0;
-        padding-bottom: 0;
-        background-color:  #c4b29e;
-
-        .upper-footer div:not(:last-child) {
-            color:red;
-        }
-       
-        div{
-        display: flex;
-        font-family: Alata;
         font-weight: 400;
-        font-size: 14px;
+        font-size: 16px;
+        font-family: Fairplay Display, serif;
         color: black;
-        width: 250px;
-        height: 180px;
-        text-align: left;
+        text-align: center;
         align-items: center;
         padding: 4px 0;
-
-
-        img {
-            width: 100px;
-            height: 100px;
-        } }
-    }
+        }}
+        .greek-decoration {
+            background-image: url('../assets/photos/image-decoration.svg');
+            background-repeat: repeat-x;
+            background-position: 0 100%;
+            background-color: transparent;
+            height: 20px;
+            background-size: 150px 20px;
+            border-style: none;
+        }
 
 </style>

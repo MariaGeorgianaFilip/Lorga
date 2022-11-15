@@ -1,132 +1,146 @@
 <template>
- <header>
-    <p class="first-banner">FREE SHIPPING: In France, from €100 of purchase, in Europe from €150, €300 for the rest of the world.</p>
-    <p class="second-banner">Secure payment - 3 free samples to choose from for any order.</p>
+<main>
+  <header>
+    <p class="first-banner">FREE SHIPPING: In Romania, from €100 of purchase, in Europe from €200, €300 for the rest of the world.</p>
+    <section>
     <div class="main-menu">
 
       <nav class="main-nav-bar">
-        <router-link class="link" to="/">FAQ</router-link>
-        <router-link class="link" to="/">+33(0)4 73 91 73 36</router-link>
-        <router-link class="link" to="/">Medias</router-link>
+        <router-link class="link" data-toggle="tooltip" title="FAQ" to="/FAQ">FAQ</router-link>
+        <!-- <router-link class="link" data-toggle="tooltip" title="+40 735526394" to="/">+40 735526394
+        
+        </router-link> -->
+        <a class="link" data-toggle="tooltip" href="tel:+40735526394">+40 735526394</a>
+        <router-link class="link" data-toggle="tooltip" title="AboutUs" to="/AboutUs">ABOUT US</router-link>
       </nav>
 
-      <button class="main-button"><span style="font-size:40px">PHAEDON</span> Paris</button>
+      <router-link class="button-link" to="/">Lorga</router-link>
       
       <nav class="main-nav-bar">
-        <router-link class="link" to="/MyAccount">MY ACCOUNT</router-link><br/>
-        <router-link class="link" to="/">CART</router-link><br/>
-        <router-link class="link" to="/">FR</router-link><br/>
+        <router-link class="link" data-toggle="tooltip" title="My Account" to="/myaccount">MY ACCOUNT</router-link><br/>
+        <router-link class="link" data-toggle="tooltip" title="Our Store" to="/Our Store">OUR STORE</router-link><br/>
+        <div class="sidebar">
+          <b-button v-b-toggle.sidebar-right>CART ({{cart.length}})</b-button>
+          <b-sidebar id="sidebar-right" title="CART" right shadow>
+          <div class="px-3 py-2">
+              <ul class="cart-list">
+                <li v-for="product in cart" :key="product.id" >
+                <h4>{{product.name}}</h4>
+                <p>{{product.price}}</p>
+            </li>
+        </ul>
+          </div>
+          </b-sidebar>
+        </div>
       </nav>
-    </div>
 
-  
-    <nav class="nav-bar-bottom">
-        <router-link class="link" to="/">PERFUMES</router-link><br/>
-        <router-link class="link" to="/">SCENTED CANDLES</router-link><br/>
-        <router-link class="link" to="/">HOME SCENTS</router-link><br/>
-        <router-link class="link" to="/">PARFUMEUR VOYAGER</router-link><br/>
-        <router-link class="link" to="/">PERFUME ADVISOR</router-link><br/>
-    </nav>
+    </div>
+    <MainHeaderMenu />
+    <div class="greek-decoration">
+    </div>
+  </section>
  </header>
+</main>
 </template>
 
 <script>
+import MainHeaderMenu from './MainHeaderMenu.vue';
 export default {
   name: 'MainHeader',
-  }
+  components: {
+    MainHeaderMenu
+  },
+  computed: {
+  naturalElementsCollection () {
+    return this.$store.state.naturalElementsCollection
+  },
+  cart () {
+      return this.$store.state.cart
+    }}}
 </script>
 
 <style scoped lang="scss">
-  header {
-    margin: 0 auto;
-    border: none;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-
-  
-    .first-banner {
-      font-style: italic;
-      font-family: Playfair Display;
-      margin: 0;
-      padding: 8px 0;
- }
-
-    .second-banner {
-      background-color: black;
-      padding: 8px 0;
-      margin: 0;
-      color: white;
-      font-style: italic;
-      font-family: Playfair Display, serif;
-  
-}
-
+header {
+  border: none;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  .first-banner {
+    font-family: Playfair Display, serif;
+    padding: 5px 10px 7px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin: 0;
+    }
+  section {
+    background-image: url("../assets/photos/image-flower.jpg"), url("../assets/photos/image-flower.jpg");
+    background-position: left, right;
+    background-size: contain;
+    background-repeat: no-repeat;
     .main-menu {
       display: flex;
       justify-content: space-between;
       padding: 40px 60px;
-      background-image: url("../assets/photos/image-flower.jpg"), url("../assets/photos/image-owl.jpg");
-      background-position: left, right;
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 260px;
-  
+      height: 320px;
+      margin-bottom: 0;
       .main-nav-bar {
-        padding-top: 80px;
+        padding-top: 100px;
         display: flex;
         justify-content: space-between;
         width: 300px;
-
-        .link {
-        font-size: 17px;
-        font-family: Playfair Display,serif;
-        letter-spacing: 1.5px;
-        text-decoration: none;
-        color: #111;
-        text-decoration: none;
-        background-color: transparent;
-      }}
-
-      .main-button {
-        height: 210px;
-        width: 210px;
-        border-radius: 100%;
-        background-image: url("../assets/photos/image-button.png");
-        background-size: cover;
-        color: black;
-        border: none;
-        font-family: Playfair Display, serif;
-        font-size: 15px;
-        letter-spacing: 1.5px;
-        font-weight: 450;
-        padding: 0;
-        color: #111;
-        text-transform: uppercase;
-        cursor: pointer;
+        .sidebar {
+          cart-list {
+            li{
+              text-decoration: none;
+            }
+          }
+          .btn {
+          background-color: transparent;
+          border: none;
+          margin: 0;
+          font-family: PlayFair Display, serif;
+          color: black;
+          letter-spacing: 1.5px;
+          font-size: 17px;
+          padding: 0 0 6px 0;
+          box-shadow: none;
         }}
-
-
-    .nav-bar-bottom {
-      display: flex;
-      margin: 0 auto;
-      justify-content: space-between;
-      padding: 6px 10px;
-      align-items: center;
-      z-index: 99;
-      position: relative;
-      margin-top: -30px;
-      width: 1000px;
-      height: 40px;
-      background-color: #c4b29e;
-      .link {
-        font-size: 15px;
+        .link {
+          font-size: 15px;
+          font-family: Playfair Display,serif;
+          letter-spacing: 1.1px;
+          color: #111;
+          text-decoration: none;
+          background-color: transparent;
+        }}
+        .button-link {
+        height: 230px;
+        width: 230px;
+        padding-top: 40px;
+        border-radius: 100%;
+        background-image: url("../assets/photos/white-flowers.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        color: black;
         font-family: Playfair Display, serif;
-        letter-spacing: 1.5px;
+        letter-spacing: 10px;
+        font-size: 45px;
+        text-align: center;
+        align-items: center;
         text-decoration: none;
-        color: #111;
-        text-decoration: none;
-        background-color: transparent;
-      }}}
-
+        line-height: 1.7;
+        font-weight: 600;
+        box-shadow: 0px 15px 18px rgba(0, 0, 0, 0.45);
+        cursor: pointer;
+      }}
+    .greek-decoration {
+      background-image: url('../assets/photos/image-decoration.svg');
+      background-repeat: repeat-x;
+      background-position: 0 100%;
+      background-color: transparent;
+      height: 20px;
+      background-size: 150px 20px;
+      border-style:none;
+}}}
 </style>
