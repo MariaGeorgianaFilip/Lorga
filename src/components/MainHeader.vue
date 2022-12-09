@@ -1,46 +1,37 @@
 <template>
-<main>
   <header>
     <p class="first-banner">FREE SHIPPING: In Romania, from €100 of purchase, in Europe from €200, €300 for the rest of the world.</p>
     <section>
-    <div class="main-menu">
-
-      <nav class="main-nav-bar">
-        <router-link class="link" data-toggle="tooltip" title="FAQ" to="/FAQ">FAQ</router-link>
-        <!-- <router-link class="link" data-toggle="tooltip" title="+40 735526394" to="/">+40 735526394
-        
-        </router-link> -->
-        <a class="link" data-toggle="tooltip" href="tel:+40735526394">+40 735526394</a>
-        <router-link class="link" data-toggle="tooltip" title="AboutUs" to="/AboutUs">ABOUT US</router-link>
-      </nav>
-
-      <router-link class="button-link" to="/">Lorga</router-link>
-      
-      <nav class="main-nav-bar">
-        <router-link class="link" data-toggle="tooltip" title="My Account" to="/myaccount">MY ACCOUNT</router-link><br/>
-        <router-link class="link" data-toggle="tooltip" title="Our Store" to="/Our Store">OUR STORE</router-link><br/>
-        <div class="sidebar">
-          <b-button v-b-toggle.sidebar-right>CART ({{cart.length}})</b-button>
-          <b-sidebar id="sidebar-right" title="CART" right shadow>
-          <div class="px-3 py-2">
-              <ul class="cart-list">
-                <li v-for="product in cart" :key="product.id" >
-                <h4>{{product.name}}</h4>
-                <p>{{product.price}}</p>
-            </li>
-        </ul>
+      <div class="main-menu">
+        <nav class="main-nav-bar">
+          <router-link class="link" data-toggle="tooltip" title="FAQ" to="/FAQ">FAQ</router-link>
+          <a class="link" data-toggle="tooltip" href="tel:+40735526394">+40 735526394</a>
+          <router-link class="link" data-toggle="tooltip" title="AboutUs" to="/AboutUs">ABOUT US</router-link>
+        </nav>
+        <router-link class="button-link" to="/">Lorga</router-link>
+        <nav class="main-nav-bar">
+          <router-link class="link" data-toggle="tooltip" title="My Account" to="/myaccount">MY ACCOUNT</router-link><br/>
+          <router-link class="link" data-toggle="tooltip" title="Our Store" to="/Our Store">OUR STORE</router-link><br/>
+          <div class="sidebar">
+            <b-button v-b-toggle.sidebar-right>CART ({{cart.length}})</b-button>
+            <b-sidebar id="sidebar-right" title="CART" right shadow>
+              <div class="px-3 py-2">
+                <ul class="cart-list">
+                  <li v-for="product in cart" :key="product.id" >
+                    <h4>{{product.name}}</h4>
+                    <p>{{product.price}}</p>
+                  </li>
+                </ul>
+              </div>
+            </b-sidebar>
           </div>
-          </b-sidebar>
-        </div>
-      </nav>
-
-    </div>
-    <MainHeaderMenu />
-    <div class="greek-decoration">
-    </div>
-  </section>
- </header>
-</main>
+        </nav>
+      </div>
+      <MainHeaderMenu />
+      <div class="greek-decoration">
+      </div>
+    </section>
+  </header>
 </template>
 
 <script>

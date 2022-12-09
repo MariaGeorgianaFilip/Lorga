@@ -1,27 +1,27 @@
 <template>
-<main>
-    <div class="greek-decoration">
-    </div>
-    <section class="upper-footer">
-        <div>
-            <p><span style="font-weight: bold; font-size:18px">In Romania</span><br/>
-            Free delievery over 100€</p>
+    <footer>
+        <div class="greek-decoration">
         </div>
-        <div>
-            <p><span style="font-weight: bold; font-size:18px">Europe</span><br/>
+        <section class="upper-footer">
+            <div>
+                <p><span style="font-weight: bold; font-size: 18px">In Romania</span><br/>
+                Free delievery over 100€</p>
+            </div>
+            <div>
+                <p><span style="font-weight: bold; font-size: 18px">Europe</span><br/>
                 Free delievery over 150€</p>
-        </div>
-        <div>
-            <p><span style="font-weight: bold; font-size:18px">Rest of the world</span> <br/>
+            </div>
+            <div>
+                <p><span style="font-weight: bold; font-size: 18px">Rest of the world</span> <br/>
                  Free deliveries on order over 300€</p>
-        </div>
-        <div>
-            <p><span style="font-weight: bold; font-size:18px">Lorga Bucharest</span><br/>
+            </div>
+            <div>
+                <p><span style="font-weight: bold; font-size:   18px">Lorga Bucharest</span><br/>
                 is 100% Made in Romania</p>
-        </div>
-    </section>
-    <BottomFooter />
-</main>
+            </div>
+        </section>
+        <BottomFooter />
+    </footer>
 </template>
 
 <script>
@@ -38,13 +38,8 @@ export default {
 .upper-footer {
     display: flex;
     justify-content: space-between;
-    box-sizing: border-box;
-    padding-bottom: 0;
+    padding: 20px 50px 20px 50px;
     background-color: $beige;
-    height: 100px;
-    width: 100%;
-    padding-left: 50px;
-    padding-right: 50px;
     div {
         display: flex;
         font-weight: 400;
@@ -63,6 +58,5 @@ export default {
             height: 20px;
             background-size: 150px 20px;
             border-style: none;
-        }
-
+}
 </style>
