@@ -1,5 +1,4 @@
 <template>
-<main>
     <section>
         <h2 class="title-bestsellers">Best Seller</h2>
         <div class="perfumes-list">
@@ -15,7 +14,6 @@
             </ul>
         </div>
     </section>
-</main>
 </template>
 
 <script>
@@ -28,7 +26,6 @@ export default {
                         name: 'Lorga Air',
                         price: '55,00€',
                         style: 'Eau de parfum'},
-
                         { id: 1, 
                         url: require("../assets/photos/parfum-fire.jpg"),
                         name: 'Lorga Fire',
@@ -75,12 +72,11 @@ section {
                             width: 180px;
                             height: 320px;
                             margin: 0;
-                            padding-bottom: 20px;
-                            padding-left: 15px;
-                            padding-right: 15px;
+                            padding: 0px 15px 20px 15px;
                     }}
-                p {margin: 0;
+                p {
+                    margin: 0;
                     padding-bottom: 15px;
                     line-height: 3px;
-                }}}}}
+}}}}}
 </style>

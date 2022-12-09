@@ -1,38 +1,37 @@
 <template>
     <section class="bottom-footer">
-            <p class="logo-bottom">Lorga</p> 
-            <nav>
-                <ul>
-                    <li class="title">STORE</li>
-                    <li v-for="item in list">
-                        <router-link :to="item.path">{{item.name}}</router-link>
-                    </li>
-                </ul>
-            </nav>
-            <nav>
-                <ul>
-                    <li class="title">ORDER</li>
-                    <li v-for="item in list1">
-                        <router-link :to="item.path">{{item.name}}</router-link>
-                    </li>
-                </ul>
-            </nav>
-            <nav>
-                <ul>
-                    <li class="title">ABOUT US</li>
-                    <li v-for="item in list2">
-                        <router-link :to="item.path">{{item.name}}</router-link>
-                    </li>
-                </ul>
-            </nav>
-            <nav>
-                <ul>
-                    <li class="title">FOLLOW US</li>
-                    <li v-for="item in list3">
-                        <router-link :to="item.path">{{item.name}}</router-link>
-                    </li>
-                </ul>
-            </nav>
+        <p class="logo-bottom">Lorga</p> 
+        <nav>
+            <ul>
+                <li class="title">STORE</li>
+                <li v-for="item in list">
+                    <router-link :to="item.path">{{item.name}}</router-link>
+                </li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li class="title">ORDER</li>
+                <li v-for="item in list1">
+                    <router-link :to="item.path">{{item.name}}</router-link>
+                </li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li class="title">ABOUT US</li>
+                <li v-for="item in list2">
+                    <router-link :to="item.path">{{item.name}}</router-link>
+                </li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li class="title">FOLLOW US</li>
+                <li><a href="www.facebook.com">Facebook</a></li>
+                <li><a href="www.instagram.com">Instagram</a></li>
+            </ul>
+        </nav>
     </section>
 </template>
 
@@ -43,39 +42,31 @@ export default {
         return {
             list: [
                 {name: 'Perfumes',
-                 path: '/Perfumes'
+                 path: '/naturalelements'
                 },
                 {name: 'Scented candles',
-                 path: '/ScentedCandles'
+                 path: '/hourscollection'
                 },
                 {name: 'Home scents',
-                 path: '/HomeScents'
+                 path: '/emotionscollection'
                 }],
-            list1:[
-                {  name:'Contact Us',
-                    path: '/ContactUs' 
+            list1: [
+                {name:'Our Store',
+                 path: '/ourstore' 
                 },
                 {name: 'FAQ',
                  path: '/FAQ'
                 },
                 {name: 'My Account',
-                 path: '/MyAccount'
+                 path: '/myaccount'
                 }],
-            list2:[
+            list2: [
                 {  name:'Lorga Bucharest',
                     path: '/LorgaBucharest' 
                 },
                 {name: 'Recycling Sorting & Environment',
                  path: '/Recycling Sorting & Environment'
-                }],
-            list3: [
-                {  name:'Facebook',
-                    path: '/Facebook'
-                },
-                {name: 'Instagram',
-                 path: '/Istagram'
-                }],
-             }}}
+}]}}}
 </script>
 
 <style scoped lang="scss">
@@ -87,7 +78,8 @@ export default {
     height: 220px;
     display: flex;
     justify-content: center;
-   .logo-bottom {color: white;
+   .logo-bottom {
+        color: white;
         font-family: Playfair Display, serif;
         letter-spacing: 4px;
         font-size: 50px;
@@ -110,13 +102,13 @@ export default {
                 list-style-type: none;
                 text-align: left;
                 width: 150px;
-                a {
+                router-link, a {
                     text-decoration: none;
                     color: white;
                     cursor: pointer;
                     font-family: Playfair Display, serif;
                     font-size: 16px;
                     font-weight: 300;
-                    line-height: 30px;}
-          }}}}
+                    line-height: 30px;
+}}}}}
 </style>
