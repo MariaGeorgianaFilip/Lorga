@@ -1,5 +1,5 @@
 <template>
-<section class="fragrance-view">
+    <section class="fragrance-view">
     <!-- <router-link to="/">Home</router-link> -->
     <img :src='fragrance.image'>
     <div class="lorga-air">
@@ -18,30 +18,28 @@
         <br/>
         <button class="add-to-cart" @click="addToCart(fragrance)">ADD TO CART</button>
     </div>
-</section>
+    </section>
 </template>
 
 <script>
 export default {
     name: 'LorgaAir',
     computed: {
-    fragrance () {
-    const id = this.$router.currentRoute.params.id
-    const naturalElementsCollection = this.$store.state.naturalElementsCollection
-    const fragrance = naturalElementsCollection.filter(obj => obj.id.toString() === id)[0]
-    return fragrance
+        fragrance () {
+        const id = this.$router.currentRoute.params.id
+        const naturalElementsCollection = this.$store.state.naturalElementsCollection
+        const fragrance = naturalElementsCollection.filter(obj => obj.id.toString() === id)[0]
+        return fragrance
     }},
     methods: {
-    increment (id) {
-        this.$store.commit('INCREMENT_FRAGRANCE_COUNT', {id})
-        console.log(id)
-    },
-    decrement (id) {
-        this.$store.commit('DECREMENT_FRAGRANCE_COUNT', {id})
-    },
-    addToCart (fragrance) {
-        this.$store.commit('ADD_TO_CART_FRAGRANCE', fragrance)
-        console.log(fragrance)
+        increment (id) {
+            this.$store.commit('INCREMENT_FRAGRANCE_COUNT', {id})
+        },
+        decrement (id) {
+            this.$store.commit('DECREMENT_FRAGRANCE_COUNT', {id})
+        },
+        addToCart (fragrance) {
+            this.$store.commit('ADD_TO_CART_FRAGRANCE', fragrance)
     }}}
 
 </script>

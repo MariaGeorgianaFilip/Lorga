@@ -20,61 +20,61 @@
                 ADD TO CART</button>
         </div>
     </section>
-    </template>
+</template>
     
     <script>
     export default {
         name: 'LorgaEarth',
         computed: {
-        fragrance () {
-            const id = this.$router.currentRoute.params.id
-            const naturalElementsCollection = this.$store.state.naturalElementsCollection
-            const fragrance = naturalElementsCollection.filter(obj => obj.id.toString() === id)[0]
-            return fragrance
+            fragrance () {
+                const id = this.$router.currentRoute.params.id
+                const naturalElementsCollection = this.$store.state.naturalElementsCollection
+                const fragrance = naturalElementsCollection.filter(obj => obj.id.toString() === id)[0]
+                return fragrance
         }},
         methods: {
-        increment (id) {
-            this.$store.commit('INCREMENT_FRAGRANCE_COUNT', {id})
-        },
-        decrement (id) {
-            this.$store.commit('DECREMENT_FRAGRANCE_COUNT', {id})
-        },
-        addToCart (fragrance) {
-            this.$store.commit('ADD_TO_CART_FRAGRANCE', fragrance)
-        }}}
+            increment (id) {
+                this.$store.commit('INCREMENT_FRAGRANCE_COUNT', {id})
+            },
+            decrement (id) {
+                this.$store.commit('DECREMENT_FRAGRANCE_COUNT', {id})
+            },
+            addToCart (fragrance) {
+                this.$store.commit('ADD_TO_CART_FRAGRANCE', fragrance)
+}}}
     </script>
         
-    <style scoped lang="scss">
-    @import "../assets/colors/colors.scss";
-    section {
-        display: flex;
-        justify-content: center;
-        padding: 50px;
-        background-color: $softbeige;
-        img {
-            width: 200px;
-            height: 400px; 
-            border: 1px solid black ;
-            border-radius: 10px;
-            box-shadow: 0px 12px 15px 12px rgba(116, 122, 97, 0.45); 
-        }
-        .lorga-earth { 
-            font-family: Playfair Display, serif;
-            padding-left: 60px;
-            padding-right: 30px;
-            .quantity{
+<style scoped lang="scss">
+@import "../assets/colors/colors.scss";
+section {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    background-color: $softbeige;
+    img {
+        width: 200px;
+        height: 400px; 
+        border: 1px solid black ;
+        border-radius: 10px;
+        box-shadow: 0px 12px 15px 12px rgba(116, 122, 97, 0.45); 
+    }
+    .lorga-earth { 
+        font-family: Playfair Display, serif;
+        padding-left: 60px;
+        padding-right: 30px;
+        .quantity   {
                 button {
                     width: 31px;
                     height: 31px;
-                }}
-            .add-to-cart {
-                background-color: black;
-                color: white;
-                border: 0;
-                width: 140px;
-                height: 35px;
-    }}}
-    </style>
+        }}
+        .add-to-cart {
+            background-color: black;
+            color: white;
+            border: 0;
+            width: 140px;
+            height: 35px;
+}}}
+</style>
         
               
                

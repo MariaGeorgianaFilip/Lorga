@@ -7,10 +7,11 @@
         </ul>
     </div>
 </template>
+
 <script>
-    export default {
-        name: 'Collections',
-        computed: {
+export default {
+    name: 'Collections',
+    computed: {
             collectionName () {
                 return this.$router.currentRoute.params.name},
             collectionId () {
@@ -20,5 +21,5 @@
                 const category = categories.filter( (category) =>  category.id === this.collectionName )
       console.log(category)
                 return []
-            }}}
+}}}
 </script>

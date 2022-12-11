@@ -35,7 +35,7 @@ section {
         margin-top: 80px;
         margin-left: -500px;
     }}
-    div{
+    div {
         h3, p { 
             padding-top: 30px;
             padding-right: 30px;

@@ -1,26 +1,24 @@
 <template>
     <section class="candle-view">
- <!-- <router-link to="/">Home</router-link> -->
- <img :src='candle.image'>
- <div class="lorga-power">
-     <h3>{{ candle.brand }}</h3>
-     <h5>{{ candle.name }}</h5>
-     <p class="description">{{ candle.about }}</p><br/>
-     <p class="price">Price: {{candle.price}} </p>
-     <div class="quantity">
-         <button @click="decrement(candle.id)">-</button> 
-         &nbsp<span>{{ candle.by_quantity || 0}}</span>&nbsp
-         <button @click="increment(candle.id)">+</button>
-     </div>
-     <br/>
-     <button class="add-to-cart" @click="addToCart(candle)">
-         ADD TO CART</button>
- </div>
-</section> 
-</template>
+        <img :src='candle.image'>
+        <div class="lorga-power">
+            <h3>{{ candle.brand }}</h3>
+            <h5>{{ candle.name }}</h5>
+            <p class="description">{{ candle.about }}</p><br/>
+            <p class="price">Price: {{candle.price}} </p>
+            <div class="quantity">
+                <button @click="decrement(candle.id)">-</button> 
+                &nbsp<span>{{ candle.by_quantity || 0}}</span>&nbsp
+                <button @click="increment(candle.id)">+</button>
+            </div>
+            <br/>
+            <button class="add-to-cart" @click="addToCart(candle)">ADD TO CART</button>
+        </div>
+    </section> 
+    </template>
 
 <script>
- export default {
+export default {
      name: "LorgaPower",
      computed: {
         candle () {

@@ -1,33 +1,32 @@
 <template>
     <section class="candle-view">
- <!-- <router-link to="/">Home</router-link> -->
- <img :src='candle.image'>
- <div class="lorga-wisdom">
-     <h3>{{ candle.brand }}</h3>
-     <h5>{{ candle.name }}</h5>
-     <p class="description">{{ candle.about }}</p><br/>
-     <p class="price">Price: {{candle.price}} </p>
-     <div class="quantity">
-         <button @click="decrement(candle.id)">-</button> 
-         &nbsp<span>{{ candle.by_quantity || 0}}</span>&nbsp
-         <button @click="increment(candle.id)">+</button>
-     </div>
-     <br/>
-     <button class="add-to-cart" @click="addToCart(candle)">
-         ADD TO CART</button>
- </div>
-</section> 
+        <img :src='candle.image'>
+        <div class="lorga-wisdom">
+            <h3>{{ candle.brand }}</h3>
+            <h5>{{ candle.name }}</h5>
+            <p class="description">{{ candle.about }}</p><br/>
+            <p class="price">Price: {{candle.price}} </p>
+            <div class="quantity">
+                <button @click="decrement(candle.id)">-</button> 
+                &nbsp<span>{{ candle.by_quantity || 0}}</span>&nbsp
+                <button @click="increment(candle.id)">+</button>
+            </div>
+            <br/>
+            <button class="add-to-cart" @click="addToCart(candle)">ADD TO CART</button>
+        </div>
+    </section> 
 </template>
+
 <script>
- export default {
-     name: "LorgaWisdom",
-     computed: {
+export default {
+    name: "LorgaWisdom",
+    computed: {
         candle () {
         const id = this.$router.currentRoute.params.id
         const emotionsCollection = this.$store.state.emotionsCollection
         const candle = emotionsCollection.filter(obj => obj.id.toString() === id)[0]
         return candle
-        }},
+    }},
     methods: {
         increment (id) {
             this.$store.commit('INCREMENT_CANDLE_COUNT', {id})
@@ -37,7 +36,7 @@
         },
         addToCart (candle) {
             this.$store.commit('ADD_TO_CART_CANDLE', candle)
-        }}}   
+}}}   
 </script>
  
 <style scoped lang="scss">

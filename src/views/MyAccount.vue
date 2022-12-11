@@ -1,8 +1,7 @@
 
-<template>
-<main>
-    <p> MY ACCOUNT </p>   
+<template>  
     <section>
+        <p> MY ACCOUNT </p>     
         <div class="login">
             <h3>Login</h3>
             <form class="login-form" @submit.prevent="handlesubmit($event)"> 
@@ -11,15 +10,17 @@
             <input 
                 type="text" 
                 v-model="user.email"
-                    placeholder="e-mail">
-            </label><br/>
+                placeholder="e-mail">
+            </label>
+            <br/>
             <label for= "password">
             Password <span style="color:red">*</span><br/>
             <input
                 type="password" 
                 v-model="user.password"
                 placeholder="password" >
-            </label><br/>
+            </label>
+            <br/>
             <div class="check-remember">
                 <input 
                     class="check-box"
@@ -48,7 +49,6 @@
             </form> 
         </div>    
     </section>
-</main>
 </template>
 
 <script>
@@ -72,80 +72,75 @@ export default {
 </script>
 
 <style scoped lang="scss">
-main {
-    margin: 0;
-    padding: 0;
-    p {
-        font-family: Playfair Display, serif;
-        text-align: center;
-        font-size: 30px;
-        font-weight: bold;
-        letter-spacing: 6px;
-        padding-top: 60px;
-        padding-bottom: 25px;
-   }
-    section {
-        font-family: Playfair Display, serif;
-        display: flex;
-        justify-content: center;
-        padding-bottom: 70px;
-        padding-right: 45px;
-        padding-left: 45px;
-    
-        .login, .register { 
-            width: 470px;
-            height: 460px;
-            h3 {
+p {
+    font-family: Playfair Display, serif;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    padding-top: 60px;
+    padding-bottom: 25px;
+}
+section {
+    font-family: Playfair Display, serif;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 70px;
+    padding-right: 45px;
+    padding-left: 45px;
+    .login, .register { 
+        width: 470px;
+        height: 460px;
+        h3 {
             text-align: left;
             font-size:22px
             }
-            .login-form, .register-form {
-                padding: 15px 20px;
+        .login-form, .register-form {
+            padding: 15px 20px;
+            border: 1px solid #d3ced2;
+            border-radius: 5px;
+            text-align: left;
+            width: 350px;
+            label {
+                display: block;
+                padding-bottom: 10px;
+            }
+            input {
+                width: 270px;
+                height: 35px;
                 border: 1px solid #d3ced2;
-                border-radius: 5px;
+            }
+            .check-remember {
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                .check-box {
+                    width: 15px;
+                    height: 15px;
+                    margin-right:10px;
+            }}
+            p { 
+                font-family: Playfair Display, serif;
+                font-size: 16px;
+                font-weight: 400;
+                letter-spacing: normal;
                 text-align: left;
-                width: 350px;
-                
-                label {
-                    display: block;
-                    padding-bottom: 10px;
-                }
-                input {
-                    width: 270px;
-                    height: 35px;
-                    border: 1px solid #d3ced2;
-                }
-                .check-remember {
-                    display: flex;
-                    justify-content: left;
-                    align-items: center;
-                    .check-box {
-                        width: 15px;
-                        height: 15px;
-                        margin-right:10px;
-                }}
-                p { 
-                    font-family: Playfair Display, serif;
-                    font-size: 16px;
-                    font-weight: 400;
-                    letter-spacing: normal;
-                    text-align: left;
-                    padding-top: 25px;
-                    margin: 0;
-                }
-                button {
-                    margin-top: 10px;
-                    border: none;
-                    border-radius: 8%;
-                    padding: 12px 24px;
-                    cursor: pointer;
-                    display: inline-block;
-                    vertical-align: middle;
-                    transform: perspective(1px) translateZ(0);
-                    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-                    position: relative;
-                    transition-property: color;
-                    transition-duration: 0.5s;}
+                padding-top: 25px;
+                margin: 0;
+            }
+            button {
+                margin-top: 10px;
+                border: none;
+                border-radius: 8%;
+                padding: 12px 24px;
+                cursor: pointer;
+                display: inline-block;
+                vertical-align: middle;
+                transform: perspective(1px) translateZ(0);
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                position: relative;
+                transition-property: color;
+                transition-duration: 0.5s;}
                     button:before {
                     content: "";
                         position: absolute;
@@ -173,5 +168,5 @@ main {
                         text-decoration: none;
                         padding-top: 25px;  
                         font-family: Playfair Display, serif;    
-}}}}}
+}}}}
 </style>

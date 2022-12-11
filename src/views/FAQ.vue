@@ -1,10 +1,10 @@
 <template>
-<main>
-    <div class="trees">
-    </div>
-    <h2>Frequently Asked Questions?</h2>
-    <Questions /> 
-</main>
+    <section>
+        <div class="trees">
+        </div>
+        <h2>Frequently Asked Questions?</h2>
+        <Questions /> 
+    </section>
 </template>
 
 <script>

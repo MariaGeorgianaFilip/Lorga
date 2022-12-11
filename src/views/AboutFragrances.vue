@@ -1,13 +1,9 @@
 <template>
-    <section>
         <div>
             <img src="../assets/photos/flowers.jpg" alt="">
-            <p>
-Inspired by ancient traditions, we’re crafting fragrances as they were created hundreds of years ago by artisan perfumers of the past—the witch doctors, outsiders, alchemists, the original heretics. 
-
-Through traditional extraction methods, like distillation, expression, and extraction, we obtain essential oils, isolates, absolutes and resins from plants and flowers that we then blend into our fragrances at high concentrations to bring you the aromatherapy benefits of nature, like the calming effects of CBD and jasmine or the uplifting properties of real citrus oils, thereby making them a functional fragrance.</p>
+            <p>Inspired by ancient traditions, we’re crafting fragrances as they were created hundreds of years ago by artisan perfumers of the past—the witch doctors, outsiders, alchemists, the original heretics. 
+Trough traditional extraction methods, like distillation, expression, and extraction, we obtain essential oils, isolates, absolutes and resins from plants and flowers that we then blend into our fragrances at high concentrations to bring you the aromatherapy benefits of nature, like the calming effects of CBD and jasmine or the uplifting properties of real citrus oils, thereby making them a functional fragrance.</p>
         </div>
-    </section>
 </template>
 
 <script>
@@ -35,6 +31,5 @@ section {
             font-family: Playfair Display, serif;
             line-height: normal;
             font-size: 16px;
-        }
-        }}
+}}}
 </style>

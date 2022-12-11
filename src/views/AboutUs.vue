@@ -1,5 +1,4 @@
 <template>
-<main>
     <section>
         <img src="../assets/photos/image-flower3.jpg" alt="">
         <div>
@@ -8,7 +7,6 @@
                 We believe that nature is incredibly sensual, so we work with these raw ingredients to create dynamic fragrances that explore the unpolished version of these plants and flowers—from dirt to stem to petals, with all their organic imperfections and earthly beauty intact, resulting in a vastly different experience than what people are used to when wearing traditional synthetic perfumes.</p>
         </div>
     </section>
-</main>
 </template>
 
 <script>
@@ -18,8 +16,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-main {
-    section {
+section {
         display: flex;
         justify-content: center;
         img {
@@ -32,17 +29,15 @@ main {
             padding-right: 60px;
             align-items: center;
             h3 {
-            font-family: Playfair Display, serif;
-            font-size: 32px;
-            text-align: center;
-            letter-spacing: 6px;
-            padding-bottom: 25px;
+                font-family: Playfair Display, serif;
+                font-size: 32px;
+                text-align: center;
+                letter-spacing: 6px;
+                padding-bottom: 25px;
             }
             p {
                 font-family: Playfair Display, serif;
                 font-size: 18px;
                 text-align: center;
-            }
-            padding-top: 30px;
 }}}
 </style>

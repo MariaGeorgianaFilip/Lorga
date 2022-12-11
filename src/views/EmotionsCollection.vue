@@ -1,5 +1,5 @@
 <template>
-<section>
+    <section>
     <div class="page-description">
         <h3 class="page-title">CANDLES</h3>
         <h4 class="page-subtitle">Emotions Collection</h4>
@@ -13,7 +13,7 @@
             </li>  
         </ul>
     </div>
-</section>
+    </section>
 </template>
 
 <script>
@@ -81,6 +81,5 @@ section {
             }
                 .candle-photo:hover {
                     transform: scale(1.1); 
-            }
-                }}}
+}}}}
 </style>

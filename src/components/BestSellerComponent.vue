@@ -5,7 +5,7 @@
             <ul class="perfumes-card">
                 <li class="perfumes-box" v-for="perfume in perfumes" :key="perfume.id">
                     <figure>
-                    <img class="perfume-image" :src="perfume.url" alt="">
+                        <img class="perfume-image" :src="perfume.url" alt="">
                     </figure>
                     <p style="font-weight: bold;"> {{perfume.name}}</p>
                     <p>{{perfume.price}}</p>
@@ -31,7 +31,7 @@ export default {
                         name: 'Lorga Fire',
                         price: '55,00€',
                         style: 'Eau de parfum'
-                        }]}}}
+}]}}}
 </script>
                               
 <style scoped lang="scss">

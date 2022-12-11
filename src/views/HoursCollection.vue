@@ -1,5 +1,5 @@
 <template>
-<section>
+    <section>
     <div class="page-presentation">
         <h3 class="page-title">HOME SCENTS</h3>
         <h4 class="page-subtitle">Hours Collection</h4>
@@ -13,17 +13,16 @@
         <p>{{homescent.price}}</p>
         </li>
     </ul> 
-</section>
+    </section>
 </template>
 
 <script>
-
 export default {
-        name: 'HoursCollection',
-        computed: {
-            hoursCollection () {
-                return this.$store.state.hoursCollection    
-            }}}
+    name: 'HoursCollection',
+    computed: {
+        hoursCollection () {
+            return this.$store.state.hoursCollection    
+}}}
 </script>
 
 <style scoped lang="scss">
@@ -82,6 +81,5 @@ section {
             }
             .homescent-photo:hover {
                     transform: scale(1.1); 
-            }
-    }}}
+}}}}
 </style>

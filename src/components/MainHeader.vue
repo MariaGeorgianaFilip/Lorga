@@ -82,20 +82,19 @@ header {
         width: 300px;
         .sidebar {
           cart-list {
-            li{
+            li {
               text-decoration: none;
-            }
-          }
+            }}
           .btn {
-          background-color: transparent;
-          border: none;
-          margin: 0;
-          font-family: PlayFair Display, serif;
-          color: black;
-          letter-spacing: 1.5px;
-          font-size: 17px;
-          padding: 0 0 6px 0;
-          box-shadow: none;
+            background-color: transparent;
+            border: none;
+            margin: 0;
+            font-family: PlayFair Display, serif;
+            color: black;
+            letter-spacing: 1.5px;
+            font-size: 17px;
+            padding: 0 0 6px 0;
+            box-shadow: none;
         }}
         .link {
           font-size: 15px;
@@ -104,8 +103,8 @@ header {
           color: #111;
           text-decoration: none;
           background-color: transparent;
-        }}
-        .button-link {
+      }}
+      .button-link {
         height: 230px;
         width: 230px;
         padding-top: 40px;
@@ -132,6 +131,6 @@ header {
       background-color: transparent;
       height: 20px;
       background-size: 150px 20px;
-      border-style:none;
+      border-style: none;
 }}}
 </style>

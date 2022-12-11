@@ -22,8 +22,7 @@ export default {
         computed: {
             naturalElementsCollection () {
                 return this.$store.state.naturalElementsCollection    
-            }}}
- 
+}}}
 </script>
 
 <style scoped lang="scss">
@@ -31,7 +30,6 @@ export default {
 section {
     padding: 30px;
     background-color: $softbeige;
-
     .page-presentation {
         .page-title {
             font-size: 32px;
@@ -87,10 +85,8 @@ section {
                 }
                 .fragrance-photo:hover {
                     transform: scale(1.1); 
-            }
-            
-            }}}
-@keyframes example {
-from {box-shadow: 0px 12px 15px 12px rgba(116, 122, 97, 0.45);}
-to {box-shadow: 0px 20px 20px 20px rgba(116, 122, 97, 0.45);}}
+            }}}}
+    @keyframes example {
+    from {box-shadow: 0px 12px 15px 12px rgba(116, 122, 97, 0.45);}
+    to {box-shadow: 0px 20px 20px 20px rgba(116, 122, 97, 0.45);}}
 </style>

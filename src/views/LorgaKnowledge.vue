@@ -21,8 +21,8 @@
 
 <script>
 export default {
-     name: "LorgaKnowledge",
-     computed: {
+    name: "LorgaKnowledge",
+    computed: {
         candle () {
             const id = this.$router.currentRoute.params.id
             const emotionsCollection = this.$store.state.emotionsCollection
