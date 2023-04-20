@@ -9,7 +9,7 @@
      <p class="price">Price: {{candle.price}} </p>
      <div class="quantity">
          <button @click="decrement(candle.id)">-</button> 
-         &nbsp<span>{{ candle.by_quantity || 0}}</span>&nbsp
+         &nbsp<span>{{ candle.count || 0}}</span>&nbsp
          <button @click="increment(candle.id)">+</button>
      </div>
      <br/>
@@ -50,10 +50,9 @@ section {
     padding: 50px;
     background-color: $lightgreen;
     img {
-        width: 350px;
-        height: 365px; 
+        width: 265px;
+        height: 245px; 
         padding-right: 45px;
-        border-radius: 10%;
     }
  .lorga-knowledge { 
      font-family: Playfair Display, serif;

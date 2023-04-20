@@ -52,8 +52,8 @@ section {
     padding: 50px;
     background-color: $softbeige;
     img {
-        width: 200px;
-        height: 400px; 
+        width: 290px;
+        height: 150px; 
         border: 1px solid black ;
         border-radius: 10px;
         box-shadow: 0px 12px 15px 12px rgba(116, 122, 97, 0.45); 

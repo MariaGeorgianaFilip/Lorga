@@ -1,7 +1,9 @@
 
 <template>  
-    <section>
-        <p> MY ACCOUNT </p>     
+    <div>
+        <p class="my-account-title"> MY ACCOUNT </p>
+        <div>  
+
         <div class="login">
             <h3>Login</h3>
             <form class="login-form" @submit.prevent="handlesubmit($event)"> 
@@ -47,8 +49,10 @@
             </label>
             <button>Register</button><br/>
             </form> 
+        </div>
+
         </div>    
-    </section>
+    </div>
 </template>
 
 <script>
@@ -72,22 +76,21 @@ export default {
 </script>
 
 <style scoped lang="scss">
-p {
+div {
+    font-family: Playfair Display, serif;
+    display: flex;
+    justify-content: center;
+    padding: 0 45px 70px 45px;
+    .my-account-title {
     font-family: Playfair Display, serif;
     text-align: center;
     font-size: 30px;
     font-weight: bold;
     letter-spacing: 6px;
-    padding-top: 60px;
-    padding-bottom: 25px;
-}
-section {
-    font-family: Playfair Display, serif;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 70px;
-    padding-right: 45px;
-    padding-left: 45px;
+    padding: 60px 0 25px 0;
+    display: inline-block;
+    }
+    div {    
     .login, .register { 
         width: 470px;
         height: 460px;
@@ -168,5 +171,5 @@ section {
                         text-decoration: none;
                         padding-top: 25px;  
                         font-family: Playfair Display, serif;    
-}}}}
+}}}}}
 </style>

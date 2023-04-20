@@ -63,6 +63,7 @@ export default new Vuex.Store({
     emotionsCollection: [ 
           { id: 5,
             image: require('@/assets/photos/happy2.png'),
+            collectionId: 'candles',
             price:'30€',
             brand: 'LORGA',
             name: 'Happiness',
@@ -70,6 +71,7 @@ export default new Vuex.Store({
             },
           { id: 6,
             image: require('@/assets/photos/power2.png'),
+            collectionId: 'candles',
             brand:'LORGA',
             name:'Power',
             price:'30€',
@@ -77,6 +79,7 @@ export default new Vuex.Store({
             },
           { id: 7,
             image: require('@/assets/photos/wisdom2.png'),
+            collectionId: 'candles',
             brand:'LORGA',
             name:'Wisdom',
             price:'30€',
@@ -84,6 +87,7 @@ export default new Vuex.Store({
             },
           { id: 8,
             image: require('@/assets/photos/knowledge2.png'),
+            collectionId: 'candles',
             brand: 'LORGA',
             name:'Knowledge',
             price: '30€',
@@ -91,22 +95,25 @@ export default new Vuex.Store({
     }],
 
     hoursCollection: [   
-        { id: 11,
+        { id: 9,
           image: require('@/assets/photos/scent-morning.png'),
+          collectionId: 'homescents',
           brand: 'LORGA',
           name: 'Morning',
           price: '25€',
           about: 'Watery clean freshness encounters honeyed neroli for a light and clean musky finish.',
           },
-          { id: 12,
+          { id: 10,
           image: require('@/assets/photos/scent-afternoon.png'),
+          collectionId: 'homescents',
           brand:'LORGA',
           name:'Afternoon',
           price:'25€',
           about: 'Introducing our first true floral scent. Earthy vetiver meets soft jasmine, tuberose and bright orange flower',
           },
-        { id: 13,
+        { id: 11,
           image: require('@/assets/photos/scent-evening.png'),
+          collectionId: 'homescents',
           brand: 'LORGA',
           name:'Evening',
           price: '25€',
@@ -141,6 +148,7 @@ export default new Vuex.Store({
       const fragranceUpdated = {...state.naturalElementsCollection[index], count}
       Vue.set(state.naturalElementsCollection, index, fragranceUpdated)
     },
+
     INCREMENT_CANDLE_COUNT (state, {id}) {
       const index = state.emotionsCollection.findIndex(candle => candle.id === id)
       const count = state.emotionsCollection[index].count
@@ -149,6 +157,7 @@ export default new Vuex.Store({
       const candleUpdated = {...state.emotionsCollection[index], count}
       Vue.set(state.emotionsCollection, index, candleUpdated)
     },
+
     INCREMENT_HOMESCENT_COUNT (state, {id}) {
       const index = state.hoursCollection.findIndex(homescent => homescent.id === id)
       const count = state.hoursCollection[index].count
@@ -182,19 +191,6 @@ export default new Vuex.Store({
       const candleUpdated = {...state.hoursCollection[index], count}
       Vue.set(state.hoursCollection, index, candleUpdated)
     }
-    // UPDATE_BUY_QUANTITY (state, {id, direction}) {
-    //   const index = state.naturalElementsCollection.findIndex(obj => obj.id === id)
-    //   const fragrance = state.naturalElementsCollection[index]
-    //   if (!fragrance.buy_quantity) {
-    //     fragrance.buy_quantity = 0
-    //   }
-    //   if (direction === 'up') {
-    //     fragrance.buy_quantity += 1
-    //   } else {
-    //     fragrance.buy_quantity -= 1
-    //   }
-    //   Vue.set(state.naturalElementsCollection, index, fragrance)
-    // }},
   },
   actions: {
    async login ({comit}, user) {

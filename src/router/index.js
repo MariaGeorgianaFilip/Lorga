@@ -5,7 +5,6 @@ import MyAccount from '../views/MyAccount.vue'
 import FAQ from '../views/FAQ.vue'
 import AboutUs from '../views/AboutUs.vue'
 import OurStore from '../views/OurStore.vue'
-import GiftCard from '../views/GiftCard.vue'
 import LostPassword from '../views/LostPassword.vue'
 import AboutScents from '../views/AboutScents.vue'
 import AboutCandles from '../views/AboutCandles.vue'
@@ -51,11 +50,6 @@ const routes = [
   //   name: 'MyAccount',
   //   component: () => import(/* webpackChunkName: "about" */ '../views/LostPassword.vue')
   // },
-  {
-    path: '/giftcard',
-    name: 'GiftCard',
-    component: GiftCard
-  },
   {
     path: '/aboutcandles',
     name: 'AboutCandles',

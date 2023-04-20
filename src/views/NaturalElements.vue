@@ -71,8 +71,8 @@ section {
                 padding-bottom: 15px;
             }
             .fragrance-photo {
-                width: 190px;
-                height: 360px;
+                width: 155px;
+                height: 320px;
                 text-align: center;
                 border: 1px solid black ;
                 margin-right: 50px;

@@ -21,10 +21,7 @@
                 <router-link class="drop-link" to="/HoursCollection">Hours Collection</router-link>
                 <router-link class="drop-link" to="/AboutScents">The story of our home scents</router-link>    
             </div>
-        </div>
-        <div>
-            <router-link class="gift-card"  title="Gift Card" to="/GiftCard">Gift Card</router-link>
-        </div>                 
+        </div>              
     </section>
 </main>
 </template>

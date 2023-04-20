@@ -9,27 +9,22 @@ Trough traditional extraction methods, like distillation, expression, and extrac
 <script>
 export default {
         name: 'AboutFragrances' }
-       
 </script>
 
 <style scoped lang="scss">
-section {
-    padding: 30px 30px;
     div {
         display: flex;
         justify-content: space-between;
         img {
-            width: 350px;
+            width: 250px;
             height: 400px;
         }
-        p{ 
-            padding-top: 100px;
-            padding-right: 30px;
-            padding-left: 30px;
+        p { 
+            padding: 100px 30px 0 30px;
             text-align: center;
             color: black;
             font-family: Playfair Display, serif;
             line-height: normal;
             font-size: 16px;
-}}}
+}}
 </style>

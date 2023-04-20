@@ -8,7 +8,7 @@
             <p class="price">Price: {{homescent.price}} </p>
             <div class="quantity">
                 <button @click="decrement(homescent.id)">-</button> 
-                &nbsp<span>{{ homescent.by_quantity || 0}}</span>&nbsp
+                &nbsp<span>{{ homescent.count || 0}}</span>&nbsp
                 <button @click="increment(homescent.id)">+</button>
             </div>
             <br/>
@@ -47,9 +47,8 @@ section {
     padding: 50px;
     background-color: $lightbeige;
     img {
-        width: 350px;
-        height: 370px; 
-        border-radius: 5%;
+        width: 250px;
+        height: 270px; 
     }
     .lorga-evening { 
         font-family: Playfair Display, serif;

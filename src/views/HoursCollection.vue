@@ -72,8 +72,8 @@ section {
             }
          
             .homescent-photo {
-                width: 290;
-                height: 360px;
+                width: 220;
+                height: 310px;
                 text-align: center;
                 border-radius: 5%;
                 box-shadow: 2px 13px 15px 13px rgba(64, 59, 48, 0.45);

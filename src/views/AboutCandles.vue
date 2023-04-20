@@ -2,7 +2,7 @@
     <section>
         <div>
             <img class="gif" src="../assets/gif/SantalGray.gif" alt="">
-            <img class="candle" src="../assets/photos/candle-wisdom.png" alt="">
+            <img class="candle" src="../assets/photos/happy2.png" alt="">
         </div>
         <div>
             <h3>The story of our home scents</h3>  
@@ -41,10 +41,10 @@ section {
         z-index: 1;
     }
     .candle {
-        width: 380px;
-        height: 380px;
+        width: 300px;
+        height: 310px;
         margin-left: -500px;
-        margin-top: 80px;
+        margin-top: 115px;
         z-index: 99;
         position: absolute;
     }}}

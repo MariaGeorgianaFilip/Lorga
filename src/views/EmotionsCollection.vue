@@ -72,8 +72,8 @@ section {
                 padding-bottom: 15px;
             }
             .candle-photo {
-                width: 220;
-                height: 325px;
+                width: 150;
+                height: 285px;
                 text-align: center;
                 border-radius: 5%;
                 box-shadow: 0px 12px 15px 12px rgba(116, 122, 97, 0.45);

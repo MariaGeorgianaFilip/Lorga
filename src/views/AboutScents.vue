@@ -28,11 +28,11 @@ section {
         z-index: 1;
     }
     .home-scent {
-        width: 380px;
-        height: 380px;
+        width: 310px;
+        height: 310px;
         z-index: 99;
         position: absolute;
-        margin-top: 80px;
+        margin-top: 115px;
         margin-left: -500px;
     }}
     div {
